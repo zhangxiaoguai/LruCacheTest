@@ -377,3 +377,11 @@ LruCache重要的几点：
 [LruCache 注释源码](https://github.com/CaMnter/AndroidLife/blob/master/app/src/main/java/com/camnter/newlife/utils/cache/LruCache.java)
 [Android高效加载大图、多图解决方案，有效避免程序OOM](http://blog.csdn.net/guolin_blog/article/details/9316683)
 [Android照片墙应用实现，再多的图片也不怕崩溃](http://blog.csdn.net/guolin_blog/article/details/9526203)
+
+
+```
+    git init
+    git remote add origin <url>
+    git fetch origin
+    git checkout master 
+```
