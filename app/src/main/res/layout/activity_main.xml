@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_test"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_centerHorizontal="true" />
+
+            <LinearLayout
+                android:id="@+id/ll_test"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_test"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bt_test"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="加载" />
+
+                <Button
+                    android:id="@+id/bt_test_original"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="加载原始尺寸" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_test2"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_below="@id/ll_test"
+                android:layout_centerHorizontal="true" />
+
+            <Button
+                android:id="@+id/bt_test2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_test2"
+                android:text="加载2" />
+
+            <ImageView
+                android:id="@+id/iv_test3"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_below="@id/bt_test2"
+                android:layout_centerHorizontal="true" />
+
+            <Button
+                android:id="@+id/bt_test3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_test3"
+                android:text="加载3" />
+
+            <ImageView
+                android:id="@+id/iv_test4"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_below="@id/bt_test3"
+                android:layout_centerHorizontal="true" />
+
+            <Button
+                android:id="@+id/bt_test4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_test4"
+                android:text="加载4" />
+
+            <Button
+                android:id="@+id/bt_jump"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bt_test4"
+                android:text="图片墙" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
