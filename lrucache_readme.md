@@ -382,7 +382,7 @@ LruCache重要的几点：
 [Android照片墙应用实现，再多的图片也不怕崩溃](http://blog.csdn.net/guolin_blog/article/details/9526203)
 
 
-# N tips 本地代码关联远程git仓库步骤
+# tips 本地代码关联远程git仓库步骤
 
 ```
     git init
