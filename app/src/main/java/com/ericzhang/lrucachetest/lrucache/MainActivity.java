@@ -1,4 +1,4 @@
-package com.ericzhang.lrucachetest;
+package com.ericzhang.lrucachetest.lrucache;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -11,6 +11,9 @@ import android.util.LruCache;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+
+import com.ericzhang.lrucachetest.R;
+import com.ericzhang.lrucachetest.disklrucache.Main3Activity;
 
 public class MainActivity extends Activity implements View.OnClickListener {
 
@@ -36,6 +39,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private Button bt_test4;
 
     private Button bt_jump;
+
+    private Button bt_disklrucache;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +72,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         bt_jump = findViewById(R.id.bt_jump);
         bt_jump.setOnClickListener(this);
+
+        bt_disklrucache = findViewById(R.id.bt_disklrucache);
+        bt_disklrucache.setOnClickListener(this);
     }
 
     private void initData() {
@@ -206,6 +214,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.bt_jump:
                 startActivity(new Intent(this, Main2Activity.class));
+                break;
+            case R.id.bt_disklrucache:
+                startActivity(new Intent(this, Main3Activity.class));
                 break;
             default:
                 break;

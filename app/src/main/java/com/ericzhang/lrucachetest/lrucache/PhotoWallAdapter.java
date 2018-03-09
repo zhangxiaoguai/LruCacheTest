@@ -1,4 +1,4 @@
-package com.ericzhang.lrucachetest;
+package com.ericzhang.lrucachetest.lrucache;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -13,6 +13,8 @@ import android.widget.AbsListView;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
+
+import com.ericzhang.lrucachetest.R;
 
 import java.net.HttpURLConnection;
 import java.net.URL;

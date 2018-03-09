@@ -88,6 +88,13 @@
                 android:layout_below="@id/bt_test4"
                 android:text="图片墙" />
 
+            <Button
+                android:id="@+id/bt_disklrucache"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bt_jump"
+                android:text="disklrucache" />
+
         </RelativeLayout>
     </ScrollView>
 

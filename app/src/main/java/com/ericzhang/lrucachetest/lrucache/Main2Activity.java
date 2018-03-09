@@ -1,8 +1,10 @@
-package com.ericzhang.lrucachetest;
+package com.ericzhang.lrucachetest.lrucache;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.GridView;
+
+import com.ericzhang.lrucachetest.R;
 
 public class Main2Activity extends Activity {
 
