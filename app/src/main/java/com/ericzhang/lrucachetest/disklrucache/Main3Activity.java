@@ -83,6 +83,7 @@ public class Main3Activity extends Activity implements View.OnClickListener {
         // TODO: 2018/3/8  最大容量也可以设置为最大磁盘容量的百分比
         long maxSize = 1024 * 1024 * 10;
         try {
+            // 创建
             mDiskLruCache = DiskLruCache.open(cacheDir, getAppVersion(this), 1, maxSize);
         } catch (IOException e) {
             e.printStackTrace();

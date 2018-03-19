@@ -95,6 +95,13 @@
                 android:layout_below="@id/bt_jump"
                 android:text="disklrucache" />
 
+            <Button
+                android:id="@+id/bt_mix"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bt_disklrucache"
+                android:text="mix" />
+
         </RelativeLayout>
     </ScrollView>
 

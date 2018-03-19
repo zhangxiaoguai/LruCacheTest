@@ -25,6 +25,9 @@
         <activity
             android:name=".disklrucache.Main3Activity"
             android:label="@string/title_activity_main3" />
+        <activity
+            android:name=".disklrucache.Main4Activity"
+            android:label="@string/title_activity_main4" />
     </application>
 
 </manifest>

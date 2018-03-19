@@ -14,6 +14,7 @@ import android.widget.ImageView;
 
 import com.ericzhang.lrucachetest.R;
 import com.ericzhang.lrucachetest.disklrucache.Main3Activity;
+import com.ericzhang.lrucachetest.disklrucache.Main4Activity;
 
 public class MainActivity extends Activity implements View.OnClickListener {
 
@@ -41,6 +42,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private Button bt_jump;
 
     private Button bt_disklrucache;
+    private Button bt_mix;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,6 +77,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         bt_disklrucache = findViewById(R.id.bt_disklrucache);
         bt_disklrucache.setOnClickListener(this);
+        bt_mix = findViewById(R.id.bt_mix);
+        bt_mix.setOnClickListener(this);
     }
 
     private void initData() {
@@ -217,6 +221,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.bt_disklrucache:
                 startActivity(new Intent(this, Main3Activity.class));
+                break;
+            case R.id.bt_mix:
+                startActivity(new Intent(this, Main4Activity.class));
                 break;
             default:
                 break;
