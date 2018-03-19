@@ -327,9 +327,9 @@ entryRemoved被LruCache调用的场景：
 - **4.（get后半段，查询丢失后处理情景，不过建议忽略）** get 的时候，正常的话不实现自定义 `create` 的话，代码上看 get 方法只会走一半，如果你实现了自定义的 `create(K key)` 方法，并且在 你 create 后的值放入 LruCache 中发生 key 冲突时被调用，**evicted=false，key=此次 get 的 key，oldValue=被你自定义 create(key)后的 value，newValue=原本存在 map 里的 key-value**。
 
 解释一下第四点吧：
-**<1>.**第四点是这样的，先 get(key)，然后没拿到，丢失。
-**<2>.**如果你提供了 自定义的 `create(key)` 方法，那么 LruCache 会根据你的逻辑自造一个 value，但是当放入的时候发现冲突了，但是已经放入了。
-**<3>.**此时，会将那个冲突的值再让回去覆盖，此时调用上述4.的 `entryRemoved` 。
+**<1>.** 第四点是这样的，先 get(key)，然后没拿到，丢失。
+**<2>.** 如果你提供了 自定义的 `create(key)` 方法，那么 LruCache 会根据你的逻辑自造一个 value，但是当放入的时候发现冲突了，但是已经放入了。
+**<3>.** 此时，会将那个冲突的值再让回去覆盖，此时调用上述4.的 `entryRemoved` 。
 因为 `HashMap` 在数据量大情况下，拿数据可能造成丢失，导致前半段查不到，你自定义的 `create(key)` 放入的时候发现又查到了**（有冲突）**。然后又急忙把原来的值放回去，此时你就白白 `create` 一趟，无所作为，还要走一遍 `entryRemoved` 。
 
 综上就如同注释写的一样：
@@ -369,7 +369,7 @@ LruCache重要的几点：
 
 - **4.** 覆写 `entryRemoved` 方法能知道 LruCache 数据移除是是否发生了冲突，也可以去手动释放资源。
 
-- **5.**`maxSize` 和 `sizeOf(K key, V value)` 方法的覆写息息相关，必须相同单位。（ 比如 maxSize 是7MB，自定义的 sizeOf 计算每个数据大小的时候必须能算出与MB之间有联系的单位 ）
+- **5.** `maxSize` 和 `sizeOf(K key, V value)` 方法的覆写息息相关，必须相同单位。（ 比如 maxSize 是7MB，自定义的 sizeOf 计算每个数据大小的时候必须能算出与MB之间有联系的单位 ）
 
 # 7. 资源
 
@@ -389,4 +389,6 @@ LruCache重要的几点：
     git remote add origin <url>
     git fetch origin
     git checkout master 
+    git branch --set-upstream-to=origin/master master  
+    git pull origin master --allow-unrelated-histories
 ```
